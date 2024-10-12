@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>🚧 app</title>
+
+    <!-- Uncomment this if you add the TailwindCSS integration -->
+    <!-- <link rel="stylesheet" href="/priv/static/app.css"> -->
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <script type="module" src="/priv/static/app.mjs"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./priv/static/sw.js');
+        });
+      }
+      </script>
+  </body>
+</html>
