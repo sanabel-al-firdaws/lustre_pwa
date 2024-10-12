@@ -3,12 +3,12 @@
 
 ## Why a PWA? 
 
-1. very nice to have your website to have an app like feel ...
+very nice to have your website to have an app like feel ...
 this is nice if your webapp is a tool
 
 for example a drawing tool like https://excalidraw.com you can install it in your phone or pc also it works 100% offline and stores your drawing in your browser storage
 
-2. if you want your site to cache data workbox helps with this (maybe someone that knows gleam more than me can figure a better way)
+if you want your site to cache data workbox helps with this (maybe someone that knows gleam more than me can figure a better way)
 
 
 ## Install
@@ -40,4 +40,6 @@ gleam run -m lustre/dev build app   # Run the project
 # gleam test  # Run the tests
 ```
 
-you don't need to test the SW in dev it might mess things up also if you run the pwa on the same port it will 
+you don't need to test the SW in dev it might mess things up also if you run the app on the same port it will continue to use the last service worker even if you remove it from your html you have to delete it from dev tools
+
+that's why private mode is helpfull in testing your service workers
