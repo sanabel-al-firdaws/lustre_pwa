@@ -1,6 +1,8 @@
 # Gleam Lustre Pwa Example
 (this is not using the best practices please help us finding it)
 
+(quick update: i got the project in a better state now you can run the service worker only in production you have to keep the 2 index.html files in sync tho and make sure the devolopment index.html dosen't have the manifest.json or sw.js imported)
+
 ## Why a PWA? 
 
 very nice to have your website to have an app like feel ...
@@ -22,11 +24,11 @@ https://developer.chrome.com/docs/workbox/modules/workbox-cli
 
 then you can run 
 ```sh
-gleam run -m lustre/dev build app ; workbox generateSW
+gleam run -m lustre/dev build --outdir=dist --minify ; workbox generateSW
 
 ```
 
-then run it like this if you want to setup things for yourself
+then run it like this if you want to setup things for yourself run this or just update the workbox-config.json
 
 ```sh 
 workbox wizard
@@ -40,6 +42,6 @@ gleam run -m lustre/dev build app   # Run the project
 # gleam test  # Run the tests
 ```
 
-you don't need to test the SW in dev it might mess things up also if you run the app on the same port it will continue to use the last service worker even if you remove it from your html you have to delete it from dev tools
+you don't need to test the SW in dev it might mess things up also if you run the app on the same port it will continue to use the last service worker even if you remove it from your dist you have to delete it from dev tools
 
-that's why private mode is helpfull in testing your service workers
+that's why private mode is helpfull in testing your service workers and why i decided to not have service workers in devolopment

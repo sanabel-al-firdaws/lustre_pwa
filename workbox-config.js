@@ -1,10 +1,9 @@
 module.exports = {
-	globDirectory: 'priv/static',
+	globDirectory: 'dist',
 	globPatterns:[
 		'**/*.{mjs,js,css,html}',
-		'../../index.html'
 	],
-	swDest: 'priv/static/sw.js',
+	swDest: 'dist/sw.js',
 	ignoreURLParametersMatching: [
 		/^utm_/,
 		/^fbclid$/

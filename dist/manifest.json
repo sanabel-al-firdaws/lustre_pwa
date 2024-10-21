@@ -1,0 +1,30 @@
+{
+    "id": "/",
+    "scope": "/",
+    "lang": "en-us",
+    "name": "My Amazing Lustre Pwa",
+    "display": "fullscreen",
+    "start_url": "/",
+    "short_name": "Lustre Pwa",
+    "theme_color": "#ffaff3",
+    "description": "this is a very little example of making a pwa from a static lustre app that can have hydration and be hosted for free on github pages or any other provider",
+    "orientation": "any",
+    "background_color": "#FAE8E0",
+    "dir": "ltr",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "display_override": ["window-controls-overlay"],
+    "icons": [
+      {
+          "src": "icons/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      },
+      {
+          "src": "icons/android-chrome-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ]
+
+}
