@@ -28,7 +28,8 @@ gleam run -m lustre/dev build --outdir=dist --minify ; workbox generateSW
 
 ```
 
-then run it like this if you want to setup things for yourself run this or just update the workbox-config.json
+ 
+if you want to configure workbox for yourself run this or just update the workbox-config.json
 
 ```sh 
 workbox wizard
